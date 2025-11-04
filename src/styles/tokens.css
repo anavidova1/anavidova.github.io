@@ -1,0 +1,47 @@
+.container {
+    height: 100vh; /* this is the max height paramteres, so its expands vertically across the whole page */
+    max-width: 900px;
+    margin: 0 auto; /* places it at the middle of the page with the max-width parameters */
+    display: flex; /*  needed for aligning the items(content) inside the container*/
+    flex-direction: column;
+    padding: 40px;
+    background-color: #25272eb3;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+.content {
+    color: white;
+    flex: 1;          
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow-y: auto;     
+    scroll-behavior: smooth;
+}
+
+.image_row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+}
+
+.text_block {
+  vertical-align: top;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;
+}
+.text_block h2{
+    margin: 0;
+    padding: 0;
+}
+.sidebar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
