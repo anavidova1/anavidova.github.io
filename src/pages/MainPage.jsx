@@ -9,7 +9,6 @@ import { IoMailOpenOutline, IoMailOutline } from "react-icons/io5";
 import { FiMail } from "react-icons/fi";
 import { FaLinkedin } from "react-icons/fa";
 import { TypeAnimation } from 'react-type-animation';
-
 import videosrc from '../assets/background_video.mp4'
 import react from "../assets/React.png"
 import vuejs from "../assets/VueJS.png"
@@ -36,8 +35,6 @@ import adobe from "../assets/Adobe_PS.png"
 import html from "../assets/HTML.png"
 
 // eslint-disable-next-line
-
-
 
 export default function MainPage() {
     const [isOpen, setIsOpen] = useState(false);
@@ -76,10 +73,10 @@ export default function MainPage() {
                 <div className='container'>
                     <div className='content'>
                         <div className='image_row'>
-                            <img className='image' alt="Profile" src={pfp} style={{height: 200, width: 200, objectFit: 'cover', borderRadius: "50%"}} />
+                            <img alt="Profile" src={pfp}/>
                             <div className='text_block' style={{alignItems: "flex-start"}}>
-                                <h2 style={{fontSize: 40}}>Ana Vidova</h2>
-                                <h1 style={{fontSize: 50}}>Data | Development | Security</h1>                           
+                                <h2>Ana Vidova</h2>
+                                <h1>Data | Development | Security</h1>                           
                             </div>
                         </div>
                         <div className='body_row'>
@@ -104,11 +101,9 @@ export default function MainPage() {
                                             {isOpen && (
                                             <div className="introduction">
                                                 <p>
-                                                    Hello and thank you for reviewing my CV :D! I am a young developer looking to expand their circle of like-minded individuals.
-                                                    I love art, calisthenics, gaming and hiking. If you want to chat about our professional interests, play a game together or just talk,
-                                                    please feel welcomed to reach out! My dream is to work in Spain, preferably in the south, and be part of a good team 
-                                                    where we can grow, inspire and motivate eachother.
-                                                    What is yours?
+                                                    Hello, and thank you for reviewing my CV! I am a young developer who enjoys meeting like-minded individuals. 
+                                                    I love drawing, gaming and exploring. If you would like to chat about professional interests, 
+                                                    collaborate on a project, play a game together or just talk, please feel welcome to reach out.
                                                 </p>
                                             </div>
                                             )}
@@ -116,11 +111,11 @@ export default function MainPage() {
                                 <section ref={expRef} className="page_section">
                                      <p>
                                         <TypeAnimation
-                                        sequence={[
-                                            "Experience",
-                                        ]}
-                                        speed={60}
-                                        repeat={0}
+                                            sequence={[
+                                                "Experience",
+                                            ]}
+                                            speed={60}
+                                            repeat={0}
                                         />
                                     </p>
                                 </section>
@@ -173,11 +168,11 @@ export default function MainPage() {
                                 <section ref={skillsRef} className="page_section">
                                     <p>
                                         <TypeAnimation
-                                        sequence={[
-                                            "Skills",
-                                        ]}
-                                        speed={60}
-                                        repeat={0}
+                                            sequence={[
+                                                "Skills",
+                                            ]}
+                                            speed={60}
+                                            repeat={0}
                                         />
                                     </p>
                                 </section>
@@ -238,11 +233,11 @@ export default function MainPage() {
                                 <section ref={projectsRef} className="page_section">
                                     <p>
                                         <TypeAnimation
-                                        sequence={[
-                                            "Projects",
-                                        ]}
-                                        speed={60}
-                                        repeat={0}
+                                            sequence={[
+                                                "Projects",
+                                            ]}
+                                            speed={60}
+                                            repeat={0}
                                         />
                                     </p>
                                 </section>
@@ -255,11 +250,11 @@ export default function MainPage() {
                                 <section ref={edRef} className="page_section">
                                     <p>
                                         <TypeAnimation
-                                        sequence={[
-                                            "Education",
-                                        ]}
-                                        speed={10}
-                                        repeat={0}
+                                            sequence={[
+                                                "Education",
+                                            ]}
+                                            speed={10}
+                                            repeat={0}
                                         />
                                     </p>
                                 </section>
@@ -271,7 +266,7 @@ export default function MainPage() {
                                         </div>
                                         <div className='education'>
                                             <p><b>High School diploma:</b> 31 Ivan Vazov, Sofia, Bulgaria</p>
-                                            <p> Specialisation in Spanish, English, Mathematics and Geography.</p>
+                                            <p>Specialisation in Spanish, English, Mathematics and Geography.</p>
                                         </div> 
                                     </div>    
                             </div>

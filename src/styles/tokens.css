@@ -18,38 +18,36 @@
 body, .content, .page-section, .description, .job-skills { font-size: var(--fs-body); }
 
 .bg-video {
-  position: fixed;       
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  object-fit: cover;   
-  z-index: -1;           
-  opacity: 1;     
+  object-fit: cover;
+  z-index: -1;
+  opacity: 1;
   filter: blur(8px);
   transform: scale(1.05);
 }
 .container {
-    height: 100vh; /* this is the max height paramteres, so its expands vertically across the whole page */
-    max-width: 1200px;
-    margin: 0 auto; /* places it at the middle of the page with the max-width parameters */
-    display: flex; /*  needed for aligning the items(content) inside the container*/
-    flex-direction: column;
-    padding: 40px;
-    background-color: #25272eb3;
-    box-sizing: border-box;
-    overflow: hidden;
-
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-color: #25272eb3;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .content {
   color: white;
-  flex: 1;          
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  overflow-y: auto;     
-  scroll-behavior: smooth;
   font: var(--font-sans);
+  overflow-y: auto;
 }
 
 .image_row {
@@ -60,11 +58,17 @@ body, .content, .page-section, .description, .job-skills { font-size: var(--fs-b
   position: relative;
 }
 
+.image_row img{
+  height: 200px;
+  width: 200px;
+  object-fit: 'cover';
+  border-radius: 50%;
+}
 .text_block {
-  vertical-align: top;  
+  vertical-align: top;
   display: flex;
   flex-direction: column;
-  justify-content: center;  
+  justify-content: center;
   align-items: center;
   font: var(--font-sans);
 }
@@ -83,13 +87,12 @@ body, .content, .page-section, .description, .job-skills { font-size: var(--fs-b
 .sidebar_box {
   width: fit-content;
   padding: 20px 24px;
-  border: 1px solid rgba(255,255,255,0.25); 
+  border: 1px solid rgba(255,255,255,0.25);
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(255,255,255,0.15);
-  backdrop-filter: blur(6px); 
+  backdrop-filter: blur(6px);
   background: rgba(0,0,0,0.15);
   align-self: flex-start;
-
 }
 .sidebar {
   display: flex;
@@ -107,15 +110,15 @@ body, .content, .page-section, .description, .job-skills { font-size: var(--fs-b
   font: var(--font-sans);
   font-size: 1rem;
   text-align: left;
-  padding: 2px 4px; 
+  padding: 2px 4px;
   cursor: pointer;
   border-radius: 8px;
   transition: transform 0.2s ease, text-shadow 0.2s ease;
 }
 
 .sidebar button:hover {
-    transform: scale(1.06);
-    opacity: 100%;
+  transform: scale(1.06);
+  opacity: 100%;
 }
 
 .contact_sidebar {
@@ -143,7 +146,7 @@ body, .content, .page-section, .description, .job-skills { font-size: var(--fs-b
   display: grid;
   grid-template-columns: max-content 1fr;
   column-gap: 30px;
-  align-items: flex-start; 
+  align-items: flex-start;
   margin-top: 20px;
   margin-bottom: 20px;
   transition: opacity 0.3s ease;
@@ -168,7 +171,7 @@ body, .content, .page-section, .description, .job-skills { font-size: var(--fs-b
 .job_right {
   flex: 1;
   opacity: 0.5;
-  align-self: center; 
+  align-self: center;
   justify-content: center;
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
@@ -179,7 +182,7 @@ body, .content, .page-section, .description, .job-skills { font-size: var(--fs-b
 }
 
 .description {
-  margin: 0;              
+  margin: 0;
   line-height: 1.4;
   font-size: 1rem;
   padding-bottom: 10px;
@@ -217,6 +220,7 @@ body, .content, .page-section, .description, .job-skills { font-size: var(--fs-b
   height: 100%;
   min-width: 0;
   overflow-y: visible;
+  overflow: auto;
   scroll-behavior: smooth;
   padding-right: 10px;
   margin-top: 0;
@@ -351,7 +355,7 @@ body, .content, .page-section, .description, .job-skills { font-size: var(--fs-b
 
 @keyframes floatText {
   0% { transform: translateY(0); }
-  100% { transform: translateY(-3px); }
+  100% { transform: translateY(-3px);}
 }
 .introduction {
   max-width: 600px;
@@ -370,25 +374,55 @@ body, .content, .page-section, .description, .job-skills { font-size: var(--fs-b
   line-height: 1.5;
   font-size: 1rem;
 }
+
+.education {
+  font-family: "CanvaSans";
+}
   
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* small laptop */
+@media(max-width: 1536px){
+  .image_row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    position: relative;
+  }
+  .image_row img{
+    height: 150px;
+    width: 150px;
 
+  }
+  .content {
+    gap: 20px;
+  }
+  .text_block h2{
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+  }
+  .text_block h1{
+    font-size: 100px;
+  }
+}
 /* mob */
 @media (max-width: 800px) {
   .container {
-    height: auto;         
+    font-family: "CanvaSans";
+    height: auto;
     min-height: 100vh;
     padding: 16px 16px 24px;
-    border-radius: 16px;   
-    overflow: visible; 
+    border-radius: 16px;
+    overflow: visible;
   }
 
   .content {
-    overflow-y: visible;  
-    gap: 10px;   
+    overflow-y: visible;
+    gap: 10px;
   }
 
   .image_row {
@@ -397,7 +431,7 @@ body, .content, .page-section, .description, .job-skills { font-size: var(--fs-b
     margin-bottom: 10px;
   }
 
-  .image {
+  .image_row img {
     width: 120px !important;
     height: 120px !important;
   }
